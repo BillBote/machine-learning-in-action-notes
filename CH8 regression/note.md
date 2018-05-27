@@ -1,0 +1,13 @@
+<script type="text/javascript"
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> 
+</script>
+# 第八章 预测数值型数据：回归
+这一章主要介绍线性回归，包括最基本的线性回归、局部加权线性回归、岭回归和逐步线性回归以及一个预测鲍鱼年龄和玩具售价的案例。
+
+## 1.用线性回归寻找最佳拟合直线
+回归的目的是获得预测值，最简单的想法就是得到一个目标值的计算公式。比如预测雨量时，可能会这样计算：
+rainQuality=0.0015\*date-0.02\*windSpeed
+这就是所谓的回归方程(regression equation)，其中0.0015和-0.02称为回归系数。当回归方程是线性方程时，称为线性回归(linear regression)。
+### 回归的一般方法
+
+假设输入数据(也可以称为自变量)储存在矩阵X中，回归系数储存在w中，我们希望获得方程$$Y=X^Tw$$得到准确的预测值，问题在于我们如何利用手上的数据获得
