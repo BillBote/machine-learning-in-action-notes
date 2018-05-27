@@ -1,6 +1,3 @@
-<script type="text/javascript"
-src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> 
-</script>
 # 第八章 预测数值型数据：回归
 这一章主要介绍线性回归，包括最基本的线性回归、局部加权线性回归、岭回归和逐步线性回归以及一个预测鲍鱼年龄和玩具售价的案例。
 
