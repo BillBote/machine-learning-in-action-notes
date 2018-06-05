@@ -14,7 +14,7 @@ def loadDataSet(fileName):
         labelMat.append(float(curLine[-1]))
     return dataMat, labelMat
 
-def standRegres(xArr,yArr):
+def standRegres(xArr,yArr):#标准线性回归函数
     xMat = mat(xArr)
     yMat = mat(yArr).T
     xTx = xMat.T*xMat
