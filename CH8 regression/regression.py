@@ -1,6 +1,6 @@
 from numpy import *
 
-def loadDataSet(fileName):
+def loadDataSet(fileName):#用于加载数据
     numFeat = len(open(fileName).readline().split('\')) - 1
     dataMat = []
     labelMat = []
