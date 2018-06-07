@@ -22,10 +22,14 @@ rainQuality=0.0015\*date-0.02\*windSpeed
 
 (e)$\hat{\sigma^2}=\frac{RSS}{n-p}$是$\sigma^2$的无偏估计
 
-如果进一步假设误差向量$e~N(0,\sigma^2I)$,则有以下性质：
+如果进一步假设误差向量$e\sim N(0,\sigma^2I)$,则有以下性质：
 
-(a)$\hat{\beta} \~ N(\beta,\sigma^2(X'X)^{-1})$；
+(a)$\hat{\beta} \sim N(\beta,\sigma^2(X'X)^{-1})$；
 
-(b)$\frac{RSS}{\sigma^2} \~ \chi^2_{n-p}$；
+(b)$\frac{RSS}{\sigma^2} \sim \chi^2_{n-p}$；
 
 (c)$\hat{\beta}$与RSS相互独立。
+
+对于$\hat{\beta}$的每一个分量也由类似性质：
+
+(a)$\hat{\beta_i}\sim N(\beta_i,\sigma^2\[(X'X)^{-1}\]\_{i+1,i+1})$;
