@@ -11,13 +11,21 @@ rainQuality=0.0015\*date-0.02\*windSpeed
 用矩阵写作$(y-Xw)^T(y-Xw)$。如果对w求导并使其为0，解出w如下：$$\hat{w}=(X^TX)^{-1}X^Ty$$
 注意这里有对$X^TX$的求逆运算，因此在代码里要确认其是否可逆。这种方法被称为最小二乘法。
 只要$X^TX$可逆，就能用这个方法建立关于任何数据的回归模型，这个模型有如下性质：
-(a)$E(\hat{\beta})=\beta$；\bar
-(b)$Cov(\hat{\beta})=\sigma^2(X^TX)^{-1}$；\\
-(c)$c'\beta$的所有线性无偏估计里，$c'\hat{\beta}$是唯一具有最小方差的估计；\\
-(d)$RSS=y'(I-X(X'X)^{-1}X')y$;\\
-(e)$\hat{\sigma^2}=\frac{RSS}{n-p}$是$\sigma^2$的无偏估计\\
 
-如果进一步假设误差向量$e~N(0,\sigma^2I)$,则有以下性质\\
-(a)$\hat{\beta}\~N(\beta,\sigma^2(X'X)^{-1})$；\\
-(b)$\frac{RSS}{\sigma^2}\~\chi^2_{n-p}$；\\
-(c)$\hat{\beta}$与RSS相互独立\\
+(a)$E(\hat{\beta})=\beta$；
+
+(b)$Cov(\hat{\beta})=\sigma^2(X^TX)^{-1}$；
+
+(c)$c'\beta$的所有线性无偏估计里，$c'\hat{\beta}$是唯一具有最小方差的估计；
+
+(d)$RSS=y'(I-X(X'X)^{-1}X')y$;
+
+(e)$\hat{\sigma^2}=\frac{RSS}{n-p}$是$\sigma^2$的无偏估计
+
+如果进一步假设误差向量$e~N(0,\sigma^2I)$,则有以下性质：
+
+(a)$\hat{\beta} \~ N(\beta,\sigma^2(X'X)^{-1})$；
+
+(b)$\frac{RSS}{\sigma^2} \~ \chi^2_{n-p}$；
+
+(c)$\hat{\beta}$与RSS相互独立。
