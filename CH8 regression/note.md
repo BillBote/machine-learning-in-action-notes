@@ -144,8 +144,16 @@ $
 
 当$D_i$过大时，我们就需要注意这组数据。
 
+### 8.1.4 Box-Cox变换
+即对因变量Y做如下变换
 
-
+$
+Y^{(\lambda)}=\left\{
+\begin{array}{rcl}
+\frac{Y^\lambda-1}{\lambda}, \lambda\neq0,\\
+lnY, $   $ \lambda=0,
+\end{array} \right.
+$
 
 
 
