@@ -33,3 +33,15 @@ rainQuality=0.0015\*date-0.02\*windSpeed
 对于$\hat{\beta}$的每一个分量也由类似性质：
 
 (a)$\hat{\beta_i}\sim N(\beta_i,\sigma^2\[(X'X)^{-1}\]\_{i+1,i+1})$;
+
+(b)在$\beta_i$的一切线性无偏估计中，$\hat{\beta_i}$是唯一方差最小的估计。
+
+regression.py里的standRegres函数实现了最基础的最小二乘。
+
+回归中有个很显然的问题，如果不同的数据得到了相同的回归直线，如何比较优劣程度，为此我们引入一个量
+
+$
+R^2=\frac{SS_{回}}{SS_{总}}
+$
+
+其中$SS_{回}=\hat{\beta'X'_cy}=y'X_c(X'_cX_c)^{-1}X'_cy$称为回归平方和
