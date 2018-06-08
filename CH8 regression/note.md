@@ -44,4 +44,4 @@ $
 R^2=\frac{SS_{回}}{SS_{总}}
 $
 
-其中$SS_{回}=\hat{\beta'X'_cy}=y'X_c(X'_cX_c)^{-1}X'_cy$称为回归平方和
+其中$SS_{回}=\hat{\beta}'X'_cy=y'X_c(X'_cX_c)^{-1}X'_cy$称为回归平方和
