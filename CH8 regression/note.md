@@ -67,7 +67,7 @@ $
 \hat{\lambda_c}=(A(X'X)^{-1}A')^{-1}(A\hat{\beta}-b)\\
 \hat{\beta_c}=\hat{\beta}-(X'X)^{-1}A'(A(X'X)^{-1}A')^{-1}(A\hat{\beta}-b).\\
 \end{aligned}
-\right
+\right.
 $
 
 其中$\hat{\beta}$为无约束下的估计。
@@ -96,3 +96,26 @@ $
 $
 
 将$H$称为帽子矩阵，不难验证$H^2=H$，利用帽子矩阵表示残差为$\hat{e}=y-\hat{y}=(I-H)y=(I-H)e$，并有如下结论：
+
+(a)$E(\hat{e})=0, Cov(\hat{e})=\sigma^2(I-H)$;
+
+(b)假设$e\sim{N(0,\sigma^2I)}$，则有$\hat{e}\sim{N(0,\sigma^2(I-H))}$.
+
+为方便比较，我们将残差进行标准化得到学生化残差
+
+$
+r_i=\frac{\hat{e_i}}{\hat{\sigma}\sqrt{1-h_{ii}}}
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
