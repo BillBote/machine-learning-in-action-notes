@@ -155,7 +155,40 @@ lnY, $   $ \lambda=0,
 \end{array} \right.
 $
 
+通过找到合适的$\lambda$来使变换后的向量$Y$与自变量有线性关系，误差服从正态分布，误差各分量等方差且相互独立。我们用极大似然估计来寻找$\lambda$。由于$y^{(\lambda)}\sim{N(X\beta,\sigma^2I)}$，有似然函数为
 
+$
+L(\beta,\sigma^2)=\frac{1}{(\sqrt{2\pi}\sigma)^n}exp\{-\frac{1}{2\sigma^2}(y^{(\lambda)}-X\beta)’(y^{(\lambda)}-X\beta)\}J
+$
+
+ 其中J为变换的雅可比行列式。
+
+我们对$\sigma^2和\beta$求导，得到$\sigma^2和\beta$的极大似然估计
+
+$
+\hat{\beta}(\lambda)=(X’X)^{-1}X’y//
+\hat{sigma^2}(\lambda)=\frac{1}{n}y^{(\lambda)}(I-X(X’X)^{-1}X’)y^{(\lambda)}=\frac{1}{n}RSS(\lambda,y^{(\lambda)}),
+$
+
+对应的极大似然函数最大值为
+
+$
+L_{max}(\lambda)=L(\hat{\beta}(\lambda),\hat{\sigma^2}(\lambda))\\
+=(2\pi{e})^{-n/2}J(\frac{RSS(\lambda,y^{(\lambda)})}{n})^{-n/2}
+$
+
+对$lnL$最大化得到
+
+$
+z^{(\lambda)}=(z_1^{(\lambda)},…,z_n^{(\lambda)})’=\frac{y^{(\lambda)}}{J^{1/n}}\\
+z_i^{(\lambda)}=\left\{
+\begin{array}{rcl}
+
+\end{array} \right.
+
+$
+
+因此我们可以作出RSS关于$\lambda$的曲线，找出使RSS最小的$\lambda$。
 
 
 
