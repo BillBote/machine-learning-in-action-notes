@@ -148,11 +148,11 @@ $
 即对因变量Y做如下变换
 
 $
-Y^{(\lambda)}=\left\{
-\begin{array}{rcl}
+Y^{(\lambda)}=
+\begin{cases}
 \frac{Y^\lambda-1}{\lambda}, \lambda\neq0,\\
 lnY, $   $ \lambda=0,
-\end{array} \right.
+\end{cases}
 $
 
 通过找到合适的$\lambda$来使变换后的向量$Y$与自变量有线性关系，误差服从正态分布，误差各分量等方差且相互独立。我们用极大似然估计来寻找$\lambda$。由于$y^{(\lambda)}\sim{N(X\beta,\sigma^2I)}$，有似然函数为
