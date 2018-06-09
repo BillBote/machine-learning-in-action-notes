@@ -183,7 +183,8 @@ $
 z^{(\lambda)}=(z_1^{(\lambda)},…,z_n^{(\lambda)})’=\frac{y^{(\lambda)}}{J^{1/n}}\\
 z_i^{(\lambda)}=\left\{
 \begin{array}{rcl}
-\end{array} \right
+\end{array} 
+\right
 $
 
 因此我们可以作出RSS关于$\lambda$的曲线，找出使RSS最小的$\lambda$。
