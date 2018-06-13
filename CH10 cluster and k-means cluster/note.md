@@ -19,7 +19,24 @@ $
 (iii)Chebyshev距离：
 
 $
-d_{ij}^{(c)}=\max\limits_{1\geq{t}\geq{p}}|x_{it}-x_{jt}|
+d_{ij}^{(c)}=\max\limits_{1\geq{t}\geq{n}}|x_{it}-x_{jt}|
 $
 
+(iv)马氏距离：
+
+$
+d_{ij}^{(m)}=(x_i-x_j)'V^{-1}(x_i-x_j)
+$
+
+其中，$V=\frac{1}{n}X'HX$，这里$H=I_n-\frac{1}{n}11'$，且V可逆
+
+(v)兰氏距离：
+
+$
+d_{ij}^{(l)}=\sum_{t=1}^n\frac{|x_{it}-x_{jt}|}{x_{it}+x_{jt}}
+$
+
+一般在${x_{it},x_{jt},t=1,..,n}$都同号时使用。
+
+上述各距离越小意味着数据点越接近，如果距离为0说明在某种意义下，两者是相同的。
 
