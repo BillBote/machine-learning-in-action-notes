@@ -19,6 +19,7 @@ $
 (iii)Chebyshev距离：
 
 $
-d_{ij}^{(c)}=(max_{})
+d_{ij}^{(c)}=max_{1\geq{t}\geq{p}}|x_{it}-x_{jt}|
 $
+
 
