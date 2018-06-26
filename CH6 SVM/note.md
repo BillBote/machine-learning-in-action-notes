@@ -63,7 +63,12 @@ $
 s.t. y_i(w·x_i+b)\geq{\hat{\gamma}}, i=1,2,...,N
 $
 
-观察发现，如果让w和b按比例变成$\lambda{w}$和$\lambda{b}$，函数间隔变成$\lambda\gamma$，对约束和最大化目标均没有影响。因此，为了简化问题，我们令$\hat{\gamma}$
+观察发现，如果让w和b按比例变成$\lambda{w}$和$\lambda{b}$，函数间隔变成$\lambda\gamma$，对约束和最大化目标均没有影响。因此，为了简化问题，我们令$\hat{\gamma}=1$。将它带入原问题并且注意到最大化$\frac{1}{||w||}$和最小化$\frac{1}{2}||w||^2$一样，可以得到
+
+$
+\min\limits_{w,b} \frac{1}{2}||w||^2\\
+s.t. y_i(w·x_i+b)-1\geq{0}
+$
 
 
 
