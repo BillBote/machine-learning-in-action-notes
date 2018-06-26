@@ -53,13 +53,19 @@ $
 
 $
 \max\limits_{w,b} \gamma  
+$
+
+$
 s.t.  y_i(\frac{w}{||w||}·x_i+\frac{b}{||w||})\geq{\gamma}, i=1,2,...,N
 $
 
 利用几何间隔和函数间隔的关系可以将问题改写为
 
 $
-\max\limits_{w,b} \frac{\hat{\gamma}}{||w||}  
+\max\limits_{w,b} \frac{\hat{\gamma}}{||w||}
+$
+
+$
 s.t. y_i(w·x_i+b)\geq{\hat{\gamma}}, i=1,2,...,N
 $
 
@@ -67,6 +73,9 @@ $
 
 $
 \min\limits_{w,b} \frac{1}{2}||w||^2  
+$
+
+$
 s.t. y_i(w·x_i+b)-1\geq{0}
 $
 
@@ -92,8 +101,14 @@ $
 C被称为惩罚参数，这样优化目标就有了两层含义：使间隔最大，并且让误分类的点最少。综合以下，问题就变成了
 
 $
-\min\limits_{w,b,\xi} \frac{1}{2}||w||^2+C\sum_{i=1}^N\xi_i  
+\min\limits_{w,b,\xi} \frac{1}{2}||w||^2+C\sum_{i=1}^N\xi_i 
+$
+
+$
 s.t. y_i(w·x_i+b)\geq{1-\xi_i}, i=1,2,...,N  
+$
+
+$
 \xi_i\geq{0}, i=1,2,...,N  
 $
 
