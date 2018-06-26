@@ -48,3 +48,25 @@ $
 $
 \gamma_i=\frac{\hat{\gamma_i}}{||w||},\gamma=\frac{\hat{\gamma}}{||w||}
 $
+
+上面我们以及获得了间隔的定义，接下来寻找使间隔最大化的平面即可，用数学式表达即为一个约束最优化问题
+
+$
+\max\limits_{w,b} \gamma\\
+s.t.  y_i(\frac{w}{||w||}·x_i+\frac{b}{||w||})\geq{\gamma}, i=1,2,...,N
+$
+
+利用几何间隔和函数间隔的关系可以将问题改写为
+
+$
+\max\limits_{w,b} \frac{\hat{\gamma}}{||w||}\\
+s.t. y_i(w·x_i+b)\geq{\hat{\gamma}}, i=1,2,...,N
+$
+
+观察发现，如果让w和b按比例变成$\lambda{w}$和$\lambda{b}$，函数间隔变成$\lambda\gamma$，对约束和最大化目标均没有影响。因此，为了简化问题，我们令$\hat{\gamma}$
+
+
+
+
+
+
