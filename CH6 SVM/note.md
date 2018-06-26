@@ -52,7 +52,7 @@ $
 上面我们以及获得了间隔的定义，接下来寻找使间隔最大化的平面即可，用数学式表达即为一个约束最优化问题
 
 $
-\max\limits_{w,b} \gamma
+\max\limits_{w,b} \gamma\\
 
 s.t.  y_i(\frac{w}{||w||}·x_i+\frac{b}{||w||})\geq{\gamma}, i=1,2,...,N
 $
@@ -60,7 +60,7 @@ $
 利用几何间隔和函数间隔的关系可以将问题改写为
 
 $
-\max\limits_{w,b} \frac{\hat{\gamma}}{||w||}
+\max\limits_{w,b} \frac{\hat{\gamma}}{||w||}\\
 
 s.t. y_i(w·x_i+b)\geq{\hat{\gamma}}, i=1,2,...,N
 $
@@ -68,7 +68,7 @@ $
 观察发现，如果让w和b按比例变成$\lambda{w}$和$\lambda{b}$，函数间隔变成$\lambda\gamma$，对约束和最大化目标均没有影响。因此，为了简化问题，我们令$\hat{\gamma}=1$。将它带入原问题并且注意到最大化$\frac{1}{||w||}$和最小化$\frac{1}{2}||w||^2$一样，可以得到
 
 $
-\min\limits_{w,b} \frac{1}{2}||w||^2
+\min\limits_{w,b} \frac{1}{2}||w||^2\\
 
 s.t. y_i(w·x_i+b)-1\geq{0}
 $
@@ -89,17 +89,17 @@ $
 同时优化目标应该引入惩罚部分
 
 $
-\frac{1}{2}||w||^2+C\Sum_{i=1}^N\xi_i
+\frac{1}{2}||w||^2+C\sum_{i=1}^N \xi_i
 $
 
 C被称为惩罚参数，这样优化目标就有了两层含义：使间隔最大，并且让误分类的点最少。综合以下，问题就变成了
 
 $
-\min\limits_{w,b,\xi} \frac{1}{2}||w||^2+C\Sum_{i=1}^N\xi_i
+\min\limits_{w,b,\xi} \frac{1}{2}||w||^2+C\sum_{i=1}^N\xi_i\\
 
-s.t. y_i(w·x_i+b)\geq{1-\xi_i}, i=1,2,...,N
+s.t. y_i(w·x_i+b)\geq{1-\xi_i}, i=1,2,...,N\\
 
-\xi_i\geq{0}, i=1,2,...,N
+\xi_i\geq{0}, i=1,2,...,N\\
 $
 
 这样这个问题的最优解就是我们寻找的超平面。
